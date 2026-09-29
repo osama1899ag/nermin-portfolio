@@ -375,6 +375,8 @@ section{
     transition:.3s;
     width:300px;
     flex-shrink:0;
+    display:flex;
+    flex-direction:column;
 }
 
 .certificate:hover{
@@ -382,16 +384,28 @@ section{
     box-shadow:0 15px 35px rgba(15,23,42,.12);
 }
 
-.certificate img{
+.img-container{
     width:100%;
     height:220px;
-    object-fit:cover;
-    display:block;
     background:#f1f5f9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+}
+
+.certificate img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    display:block;
 }
 
 .certificate-info{
     padding:15px;
+    background:white;
+    border-top:1px solid #f1f5f9;
+    flex-grow:1;
 }
 
 .certificate-info h3{
@@ -954,7 +968,9 @@ English Language
 
 <div class="certificate" onclick="openCertificate('cert1.jpg')">
 
+<div class="img-container">
 <img src="cert1.jpg" alt="تأهيل الكوادر الشبابية">
+</div>
 
 <div class="certificate-info">
 
@@ -971,7 +987,9 @@ English Language
 
 <div class="certificate" onclick="openCertificate('cert2.jpg')">
 
+<div class="img-container">
 <img src="cert2.jpg" alt="درع التميز 2023">
+</div>
 
 <div class="certificate-info">
 
@@ -988,7 +1006,9 @@ English Language
 
 <div class="certificate" onclick="openCertificate('cert3.jpg')">
 
+<div class="img-container">
 <img src="cert3.jpg" alt="أساسيات التسويق الرقمي">
+</div>
 
 <div class="certificate-info">
 
@@ -1005,7 +1025,9 @@ English Language
 
 <div class="certificate" onclick="openCertificate('cert4.jpg')">
 
+<div class="img-container">
 <img src="cert4.jpg" alt="تدريب اللغة الإنجليزية">
+</div>
 
 <div class="certificate-info">
 
@@ -1022,7 +1044,9 @@ English Language
 
 <div class="certificate" onclick="openCertificate('cert5.jpg')">
 
+<div class="img-container">
 <img src="cert5.jpg" alt="التأهيل لسوق العمل">
+</div>
 
 <div class="certificate-info">
 
@@ -1039,7 +1063,9 @@ English Language
 
 <div class="certificate" onclick="openCertificate('cert6.jpg')">
 
+<div class="img-container">
 <img src="cert6.jpg" alt="شهادة تقدير وتدريب">
+</div>
 
 <div class="certificate-info">
 
@@ -1079,16 +1105,16 @@ English Language
 
 <div class="contact-buttons">
 
-<a href="tel:01@@@@" class="btn">
-📞 01@@@@
+<a href="tel:01029252708" class="btn">
+📞 01029252708
 </a>
 
-<a href="mailto:osama@@@@gmail.com" class="btn">
+<a href="mailto:osama1999ag@gmail.com" class="btn">
 ✉️ البريد الإلكتروني
 </a>
 
 <a
-href="https://wa.me/201@@@#"
+href="https://wa.me/201029252708"
 target="_blank"
 class="btn">
 
@@ -1188,7 +1214,7 @@ const sliderWrapper = document.getElementById("sliderWrapper");
 certSlider.innerHTML += certSlider.innerHTML;
 
 let scrollPos = 0;
-let speed = 0.8; // سرعة الحركة (كلما قل الرقم كانت الحركة أبطأ وأنعَم)
+let speed = 0.8; // سرعة الحركة
 let animationId = null;
 let isPaused = false;
 
@@ -1207,7 +1233,7 @@ function autoScroll() {
 // البدء بالحركة
 animationId = requestAnimationFrame(autoScroll);
 
-// إيقاف الحركة عند تحريك الماوس أو التمرير فوق الشريط
+// إيقاف الحركة عند تحريك الماوس فوق الشريط
 sliderWrapper.addEventListener("mouseenter", () => { isPaused = true; });
 sliderWrapper.addEventListener("mouseleave", () => { 
     if (document.getElementById("certificateModal").style.display !== "flex") {
