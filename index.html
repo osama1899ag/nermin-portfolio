@@ -349,12 +349,21 @@ section{
     border-color:#2563eb;
 }
 
-/* CERTIFICATES */
+/* CERTIFICATES SLIDER */
 
-.certificates{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+.slider-wrapper{
+    overflow:hidden;
+    position:relative;
+    width:100%;
+    padding:15px 0;
+    border-radius:20px;
+}
+
+.certificates-slider{
+    display:flex;
     gap:22px;
+    width:max-content;
+    will-change:transform;
 }
 
 .certificate{
@@ -364,6 +373,8 @@ section{
     border:1px solid #e5e9ef;
     cursor:pointer;
     transition:.3s;
+    width:300px;
+    flex-shrink:0;
 }
 
 .certificate:hover{
@@ -373,7 +384,7 @@ section{
 
 .certificate img{
     width:100%;
-    height:230px;
+    height:220px;
     object-fit:cover;
     display:block;
     background:#f1f5f9;
@@ -509,10 +520,6 @@ footer{
     .cards{
         grid-template-columns:1fr;
     }
-
-    .certificates{
-        grid-template-columns:repeat(2,1fr);
-    }
 }
 
 @media(max-width:550px){
@@ -537,12 +544,12 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
-    .certificates{
-        grid-template-columns:1fr;
-    }
-
     .contact-box{
         padding:35px 20px;
+    }
+
+    .certificate{
+        width:260px;
     }
 
 }
@@ -919,7 +926,7 @@ English Language
 </section>
 
 
-<!-- CERTIFICATES -->
+<!-- CERTIFICATES SLIDER -->
 
 <section id="certificates">
 
@@ -938,27 +945,22 @@ English Language
 </div>
 
 
-<div class="certificates">
+<div class="slider-wrapper" id="sliderWrapper">
+
+<div class="certificates-slider" id="certSlider">
 
 
 <!-- CERTIFICATE 1 -->
 
-<div class="certificate"
-onclick="openCertificate('IMG-20260928-WA0057.jpg')">
+<div class="certificate" onclick="openCertificate('cert1.jpg')">
 
-<img
-src="IMG-20260928-WA0057.jpg"
-alt="شهادة اجتياز التدريب - تأهيل الكوادر الشبابية">
+<img src="cert1.jpg" alt="تأهيل الكوادر الشبابية">
 
 <div class="certificate-info">
 
-<h3>
-تأهيل الكوادر الشبابية
-</h3>
+<h3>تأهيل الكوادر الشبابية</h3>
 
-<p>
-شهادة معتمدة باجتياز التدريب
-</p>
+<p>شهادة معتمدة باجتياز التدريب</p>
 
 </div>
 
@@ -967,22 +969,15 @@ alt="شهادة اجتياز التدريب - تأهيل الكوادر الشب
 
 <!-- CERTIFICATE 2 -->
 
-<div class="certificate"
-onclick="openCertificate('IMG-20260928-WA0061.jpg')">
+<div class="certificate" onclick="openCertificate('cert2.jpg')">
 
-<img
-src="IMG-20260928-WA0061.jpg"
-alt="درع التميز 2023">
+<img src="cert2.jpg" alt="درع التميز 2023">
 
 <div class="certificate-info">
 
-<h3>
-درع التميز 2023
-</h3>
+<h3>درع التميز 2023</h3>
 
-<p>
-تكريم وتقدير للتميز
-</p>
+<p>تكريم وتقدير للتميز</p>
 
 </div>
 
@@ -991,22 +986,15 @@ alt="درع التميز 2023">
 
 <!-- CERTIFICATE 3 -->
 
-<div class="certificate"
-onclick="openCertificate('IMG-20260928-WA0065.jpg')">
+<div class="certificate" onclick="openCertificate('cert3.jpg')">
 
-<img
-src="IMG-20260928-WA0065.jpg"
-alt="شهادة أساسيات التسويق الرقمي">
+<img src="cert3.jpg" alt="أساسيات التسويق الرقمي">
 
 <div class="certificate-info">
 
-<h3>
-أساسيات التسويق الرقمي
-</h3>
+<h3>أساسيات التسويق الرقمي</h3>
 
-<p>
-Fundamentals of Digital Marketing
-</p>
+<p>Fundamentals of Digital Marketing</p>
 
 </div>
 
@@ -1015,22 +1003,15 @@ Fundamentals of Digital Marketing
 
 <!-- CERTIFICATE 4 -->
 
-<div class="certificate"
-onclick="openCertificate('IMG-20260928-WA0084.jpg')">
+<div class="certificate" onclick="openCertificate('cert4.jpg')">
 
-<img
-src="IMG-20260928-WA0084.jpg"
-alt="شهادة تدريب اللغة الإنجليزية">
+<img src="cert4.jpg" alt="تدريب اللغة الإنجليزية">
 
 <div class="certificate-info">
 
-<h3>
-تدريب اللغة الإنجليزية
-</h3>
+<h3>تدريب اللغة الإنجليزية</h3>
 
-<p>
-50 ساعة تدريبية – 2023
-</p>
+<p>50 ساعة تدريبية – 2023</p>
 
 </div>
 
@@ -1039,22 +1020,15 @@ alt="شهادة تدريب اللغة الإنجليزية">
 
 <!-- CERTIFICATE 5 -->
 
-<div class="certificate"
-onclick="openCertificate('IMG-20260928-WA0085.jpg')">
+<div class="certificate" onclick="openCertificate('cert5.jpg')">
 
-<img
-src="IMG-20260928-WA0085.jpg"
-alt="شهادة التأهيل لسوق العمل">
+<img src="cert5.jpg" alt="التأهيل لسوق العمل">
 
 <div class="certificate-info">
 
-<h3>
-التأهيل لسوق العمل
-</h3>
+<h3>التأهيل لسوق العمل</h3>
 
-<p>
-CV – المقابلة الشخصية – المهارات الشخصية
-</p>
+<p>CV – المقابلة الشخصية – المهارات الشخصية</p>
 
 </div>
 
@@ -1063,27 +1037,22 @@ CV – المقابلة الشخصية – المهارات الشخصية
 
 <!-- CERTIFICATE 6 -->
 
-<div class="certificate"
-onclick="openCertificate('IMG-20260928-WA0086.jpg')">
+<div class="certificate" onclick="openCertificate('cert6.jpg')">
 
-<img
-src="IMG-20260928-WA0086.jpg"
-alt="شهادة تقدير وتدريب">
+<img src="cert6.jpg" alt="شهادة تقدير وتدريب">
 
 <div class="certificate-info">
 
-<h3>
-شهادة تقدير وتدريب
-</h3>
+<h3>شهادة تقدير وتدريب</h3>
 
-<p>
-إنجاز وتقدير في مجال التدريب
-</p>
+<p>إنجاز وتقدير في مجال التدريب</p>
 
 </div>
 
 </div>
 
+
+</div>
 
 </div>
 
@@ -1110,8 +1079,8 @@ alt="شهادة تقدير وتدريب">
 
 <div class="contact-buttons">
 
-<a href="tel:01********" class="btn">
-📞 01********
+<a href="tel:01@@@@" class="btn">
+📞 01@@@@
 </a>
 
 <a href="mailto:osama@@@@gmail.com" class="btn">
@@ -1119,7 +1088,7 @@ alt="شهادة تقدير وتدريب">
 </a>
 
 <a
-href="https://wa.me/+01********"
+href="https://wa.me/201@@@#"
 target="_blank"
 class="btn">
 
@@ -1210,20 +1179,53 @@ alt="Certificate">
 
 <script>
 
+/* CERTIFICATE SLIDER & MODAL */
+
+const certSlider = document.getElementById("certSlider");
+const sliderWrapper = document.getElementById("sliderWrapper");
+
+// تكرار الكروت لضمان حركة متصلة لا تنتهي (Infinite Scroll effect)
+certSlider.innerHTML += certSlider.innerHTML;
+
+let scrollPos = 0;
+let speed = 0.8; // سرعة الحركة (كلما قل الرقم كانت الحركة أبطأ وأنعَم)
+let animationId = null;
+let isPaused = false;
+
+function autoScroll() {
+    if (!isPaused) {
+        scrollPos += speed;
+        // إذا وصل الشريط إلى منتصف المحتوى المكرر يعود للبداية بسلاسة
+        if (scrollPos >= certSlider.scrollWidth / 2) {
+            scrollPos = 0;
+        }
+        certSlider.style.transform = `translateX(${scrollPos}px)`;
+    }
+    animationId = requestAnimationFrame(autoScroll);
+}
+
+// البدء بالحركة
+animationId = requestAnimationFrame(autoScroll);
+
+// إيقاف الحركة عند تحريك الماوس أو التمرير فوق الشريط
+sliderWrapper.addEventListener("mouseenter", () => { isPaused = true; });
+sliderWrapper.addEventListener("mouseleave", () => { 
+    if (document.getElementById("certificateModal").style.display !== "flex") {
+        isPaused = false; 
+    }
+});
+
 /* CERTIFICATE VIEWER */
 
 function openCertificate(image){
-
+    isPaused = true; // إيقاف الشريط المتحرك عند فتح النافذة
     document.getElementById("modalImage").src = image;
-
     document.getElementById("certificateModal").style.display = "flex";
-
 }
 
 function closeCertificate(){
-
     document.getElementById("certificateModal").style.display = "none";
-
+    isPaused = false; // إعادة تشغيل الشريط المتحرك بعد إغلاق النافذة
 }
 
 
@@ -1243,11 +1245,9 @@ new QRCode(
 /* ESC KEY */
 
 document.addEventListener("keydown",function(event){
-
     if(event.key === "Escape"){
         closeCertificate();
     }
-
 });
 
 </script>
