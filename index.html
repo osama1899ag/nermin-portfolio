@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نرمين محمود أحمد رشوان | Professional Portfolio</title>
+
+<meta name="description"
+content="الموقع الشخصي لنرمين محمود أحمد رشوان - طالبة بكلية الدراسات الإسلامية والعربية، شعبة اللغة العربية.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",Arial,sans-serif;
+    background:#f5f7fb;
+    color:#172033;
+    line-height:1.8;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1000;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid #e7eaf0;
+}
+
+.nav-container{
+    max-width:1150px;
+    margin:auto;
+    padding:14px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#2563eb;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    color:#4b5563;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    padding:130px 25px 80px;
+
+    background:
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(37,99,235,.15),
+        transparent 30%
+    ),
+    linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef4ff
+    );
+}
+
+.hero-container{
+    max-width:1050px;
+    width:100%;
+    margin:auto;
+    text-align:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:50px;
+    background:#e8f0ff;
+    color:#2563eb;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,65px);
+    line-height:1.25;
+    margin-bottom:12px;
+}
+
+.hero h1 span{
+    color:#2563eb;
+}
+
+.hero h2{
+    font-size:20px;
+    color:#475569;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:#64748b;
+    font-size:16px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 23px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#2563eb;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+.btn-secondary{
+    background:white;
+    border:1px solid #dce2eb;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-3px);
+}
+
+/* QUICK INFO */
+
+.quick-info{
+    max-width:900px;
+    margin:-45px auto 0;
+    position:relative;
+    z-index:5;
+    padding:0 20px;
+}
+
+.info-card{
+    background:white;
+    border:1px solid #e5e9f0;
+    border-radius:20px;
+    padding:25px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    box-shadow:0 15px 40px rgba(15,23,42,.08);
+}
+
+.info-item{
+    text-align:center;
+    border-left:1px solid #e5e9f0;
+}
+
+.info-item:last-child{
+    border-left:none;
+}
+
+.info-icon{
+    font-size:22px;
+    margin-bottom:4px;
+}
+
+.info-item strong{
+    display:block;
+    font-size:13px;
+}
+
+.info-item span{
+    font-size:12px;
+    color:#64748b;
+}
+
+/* SECTIONS */
+
+section{
+    padding:90px 25px;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-head span{
+    color:#2563eb;
+    font-size:13px;
+    font-weight:800;
+}
+
+.section-head h2{
+    font-size:32px;
+    margin-top:5px;
+}
+
+.section-head p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about-box{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    border:1px solid #e8ebf0;
+    box-shadow:0 12px 35px rgba(15,23,42,.05);
+}
+
+.about-box p{
+    color:#475569;
+    font-size:15px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    border:1px solid #e8ebf0;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(15,23,42,.08);
+}
+
+.card-icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#eef4ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#2563eb;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.skill{
+    background:white;
+    border:1px solid #dfe5ee;
+    padding:10px 18px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:600;
+    color:#334155;
+    transition:.3s;
+}
+
+.skill:hover{
+    background:#2563eb;
+    color:white;
+    border-color:#2563eb;
+}
+
+/* CERTIFICATES */
+
+.certificates{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.certificate{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #e5e9ef;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.certificate:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(15,23,42,.12);
+}
+
+.certificate img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+    background:#f1f5f9;
+}
+
+.certificate-info{
+    padding:15px;
+}
+
+.certificate-info h3{
+    font-size:15px;
+}
+
+.certificate-info p{
+    color:#64748b;
+    font-size:12px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:linear-gradient(
+        135deg,
+        #172033,
+        #263b60
+    );
+
+    color:white;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.contact-buttons .btn{
+    background:white;
+    color:#172033;
+}
+
+/* QR */
+
+.qr-section{
+    text-align:center;
+}
+
+#qrcode{
+    background:white;
+    display:inline-block;
+    padding:15px;
+    border-radius:15px;
+    margin-top:15px;
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+.qr-note{
+    color:#64748b;
+    font-size:12px;
+    margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#101827;
+    color:#94a3b8;
+    text-align:center;
+    padding:25px;
+    font-size:12px;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(0,0,0,.9);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    left:25px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .info-card{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .info-item{
+        border-left:none;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .certificates{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:550px){
+
+    .hero{
+        padding-top:110px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero h2{
+        font-size:17px;
+    }
+
+    section{
+        padding:65px 18px;
+    }
+
+    .info-card{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .certificates{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        padding:35px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">
+Nermin<span>.</span>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#about">نبذة</a></li>
+<li><a href="#education">التعليم</a></li>
+<li><a href="#experience">الخبرة</a></li>
+<li><a href="#courses">الدورات</a></li>
+<li><a href="#certificates">الشهادات</a></li>
+<li><a href="#contact">تواصل</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-container">
+
+<span class="badge">
+PROFESSIONAL PORTFOLIO
+</span>
+
+<h1>
+نرمين محمود
+<span>أحمد رشوان</span>
+</h1>
+
+<h2>
+طالبة لغة عربية | مهتمة بالتعليم والعمل مع الأطفال
+</h2>
+
+<p>
+طالبة بالفرقة الرابعة بكلية الدراسات الإسلامية والعربية للبنات بسوهاج،
+شعبة اللغة العربية، لديها خبرة في العمل التطوعي ودورات تدريبية في
+إعداد القادة والتأهيل لسوق العمل، وتسعى إلى تطوير مهاراتها المهنية والتعليمية.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#certificates" class="btn btn-primary">
+استعرض الشهادات
+</a>
+
+<a href="CV.pdf" target="_blank" class="btn btn-secondary">
+عرض السيرة الذاتية
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- QUICK INFORMATION -->
+
+<div class="quick-info">
+
+<div class="info-card">
+
+<div class="info-item">
+
+<div class="info-icon">🎓</div>
+
+<strong>التخصص</strong>
+
+<span>اللغة العربية</span>
+
+</div>
+
+
+<div class="info-item">
+
+<div class="info-icon">📚</div>
+
+<strong>الفرقة</strong>
+
+<span>الرابعة</span>
+
+</div>
+
+
+<div class="info-item">
+
+<div class="info-icon">📍</div>
+
+<strong>الموقع</strong>
+
+<span>سوهاج – الشوش الغربية</span>
+
+</div>
+
+
+<div class="info-item">
+
+<div class="info-icon">🎂</div>
+
+<strong>العمر</strong>
+
+<span>24 سنة</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>ABOUT ME</span>
+
+<h2>نبذة عني</h2>
+
+<p>تعرف أكثر على نرمين وخبراتها</p>
+
+</div>
+
+<div class="about-box">
+
+<p>
+
+أنا نرمين محمود أحمد رشوان، طالبة بالفرقة الرابعة بكلية
+الدراسات الإسلامية والعربية للبنات بسوهاج، شعبة اللغة العربية.
+
+لدي اهتمام بالمجال التعليمي والتعامل مع الأطفال، وأسعى إلى
+تطوير مهاراتي العملية والمهنية باستمرار.
+
+شاركت في فريق كن ذا أثر سوهاج التطوعي لمدة عام خلال عام 2023،
+كما حصلت على دورات في إعداد القادة والتأهيل لسوق العمل،
+بالإضافة إلى دورات في اللغة الإنجليزية والتسويق الرقمي.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>EDUCATION</span>
+
+<h2>التعليم</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🎓</div>
+
+<h3>
+كلية الدراسات الإسلامية والعربية للبنات بسوهاج
+</h3>
+
+<p>
+الفرقة الرابعة
+<br>
+شعبة اللغة العربية
+<br>
+الحالة التعليمية: طالبة
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>EXPERIENCE</span>
+
+<h2>الخبرة والتطوع</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🤝</div>
+
+<h3>
+فريق كن ذا أثر – سوهاج التطوعي
+</h3>
+
+<p>
+2023 – خبرة تطوعية لمدة عام
+</p>
+
+<br>
+
+<p>
+المشاركة في الأنشطة والمبادرات التطوعية،
+والعمل ضمن فريق، والتعاون في تنفيذ المهام والفعاليات
+المختلفة، وتطوير مهارات التواصل وتحمل المسؤولية.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>COURSES & TRAINING</span>
+
+<h2>الدورات التدريبية</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">👑</div>
+
+<h3>
+إعداد القادة
+</h3>
+
+<p>
+Youth Cadres Rehabilitation / Leadership Training
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">💼</div>
+
+<h3>
+التأهيل لسوق العمل
+</h3>
+
+<p>
+Job Market Preparation Course
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">📣</div>
+
+<h3>
+أساسيات التسويق الرقمي
+</h3>
+
+<p>
+Certificate in Fundamentals of Digital Marketing
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🇬🇧</div>
+
+<h3>
+English Language
+</h3>
+
+<p>
+شهادة تدريبية – المركز البريطاني للتدريب
+<br>
+50 ساعة تدريبية – 2023
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<span>SKILLS</span>
+
+<h2>المهارات</h2>
+
+</div>
+
+<div class="skills">
+
+<div class="skill">التواصل الفعال</div>
+<div class="skill">العمل الجماعي</div>
+<div class="skill">تحمل المسؤولية</div>
+<div class="skill">العمل التطوعي</div>
+<div class="skill">التعامل مع الأطفال</div>
+<div class="skill">تنظيم الأنشطة</div>
+<div class="skill">مهارات القيادة</div>
+<div class="skill">التعاون ضمن فريق</div>
+<div class="skill">التأهيل لسوق العمل</div>
+<div class="skill">أساسيات التسويق الرقمي</div>
+<div class="skill">اللغة الإنجليزية</div>
+<div class="skill">الاستعداد للتعلم والتطوير</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>CERTIFICATES</span>
+
+<h2>الشهادات والإنجازات</h2>
+
+<p>
+اضغط على أي شهادة لعرضها بالحجم الكامل
+</p>
+
+</div>
+
+
+<div class="certificates">
+
+
+<!-- CERTIFICATE 1 -->
+
+<div class="certificate"
+onclick="openCertificate('certificates/IMG-20260928-WA0057.jpg')">
+
+<img
+src="certificates/IMG-20260928-WA0057.jpg"
+alt="شهادة اجتياز التدريب - تأهيل الكوادر الشبابية">
+
+<div class="certificate-info">
+
+<h3>
+تأهيل الكوادر الشبابية
+</h3>
+
+<p>
+شهادة معتمدة باجتياز التدريب
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CERTIFICATE 2 -->
+
+<div class="certificate"
+onclick="openCertificate('certificates/IMG-20260928-WA0061.jpg')">
+
+<img
+src="certificates/IMG-20260928-WA0061.jpg"
+alt="درع التميز 2023">
+
+<div class="certificate-info">
+
+<h3>
+درع التميز 2023
+</h3>
+
+<p>
+تكريم وتقدير للتميز
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CERTIFICATE 3 -->
+
+<div class="certificate"
+onclick="openCertificate('certificates/IMG-20260928-WA0065.jpg')">
+
+<img
+src="certificates/IMG-20260928-WA0065.jpg"
+alt="شهادة أساسيات التسويق الرقمي">
+
+<div class="certificate-info">
+
+<h3>
+أساسيات التسويق الرقمي
+</h3>
+
+<p>
+Fundamentals of Digital Marketing
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CERTIFICATE 4 -->
+
+<div class="certificate"
+onclick="openCertificate('certificates/IMG-20260928-WA0084.jpg')">
+
+<img
+src="certificates/IMG-20260928-WA0084.jpg"
+alt="شهادة تدريب اللغة الإنجليزية">
+
+<div class="certificate-info">
+
+<h3>
+تدريب اللغة الإنجليزية
+</h3>
+
+<p>
+50 ساعة تدريبية – 2023
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CERTIFICATE 5 -->
+
+<div class="certificate"
+onclick="openCertificate('certificates/IMG-20260928-WA0085.jpg')">
+
+<img
+src="certificates/IMG-20260928-WA0085.jpg"
+alt="شهادة التأهيل لسوق العمل">
+
+<div class="certificate-info">
+
+<h3>
+التأهيل لسوق العمل
+</h3>
+
+<p>
+CV – المقابلة الشخصية – المهارات الشخصية
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CERTIFICATE 6 -->
+
+<div class="certificate"
+onclick="openCertificate('certificates/IMG-20260928-WA0086.jpg')">
+
+<img
+src="certificates/IMG-20260928-WA0086.jpg"
+alt="شهادة تقدير وتدريب">
+
+<div class="certificate-info">
+
+<h3>
+شهادة تقدير وتدريب
+</h3>
+
+<p>
+إنجاز وتقدير في مجال التدريب
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>
+هل تريد التواصل مع نرمين؟
+</h2>
+
+<p>
+يمكن التواصل عبر الهاتف أو البريد الإلكتروني.
+</p>
+
+<div class="contact-buttons">
+
+<a href="tel:01039785354" class="btn">
+📞 01039785354
+</a>
+
+<a href="tel:01117197701" class="btn">
+📞 01117197701
+</a>
+
+<a href="mailto:jermeen9@gmail.com" class="btn">
+✉️ البريد الإلكتروني
+</a>
+
+<a
+href="https://wa.me/201039785354"
+target="_blank"
+class="btn">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QR -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<span>PORTFOLIO QR CODE</span>
+
+<h2>
+رابط البورتفوليو
+</h2>
+
+<p>
+امسح الكود من هاتفك الجوال
+</p>
+
+</div>
+
+<div class="qr-section">
+
+<div id="qrcode"></div>
+
+<div class="qr-note">
+Scan to View Nermin's Portfolio
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Designed By Elsherif C.V Maker
+
+<br>
+
+Professional Portfolio
+
+</footer>
+
+
+<!-- CERTIFICATE MODAL -->
+
+<div
+class="modal"
+id="certificateModal"
+onclick="closeCertificate()">
+
+<span class="close">
+×
+</span>
+
+<img
+id="modalImage"
+src=""
+alt="Certificate">
+
+</div>
+
+
+<!-- QR LIBRARY -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<script>
+
+/* CERTIFICATE VIEWER */
+
+function openCertificate(image){
+
+    document.getElementById("modalImage").src = image;
+
+    document.getElementById("certificateModal").style.display = "flex";
+
+}
+
+function closeCertificate(){
+
+    document.getElementById("certificateModal").style.display = "none";
+
+}
+
+
+/* QR CODE */
+
+new QRCode(
+    document.getElementById("qrcode"),
+    {
+        text: window.location.href,
+        width:180,
+        height:180,
+        correctLevel:QRCode.CorrectLevel.H
+    }
+);
+
+
+/* ESC KEY */
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key === "Escape"){
+        closeCertificate();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
